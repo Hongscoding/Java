@@ -18,7 +18,9 @@ public class MultiArrayTest {
 		System.out.println("scores의 합 : "+total);
 		
 		// 2차원 배열
-		int [][]arr2d = {{1,2,3,4}, {5,6,7,8}, {9,10,11,12}};
+		int [][]arr2d = {{1,2,3,4}, 
+						 {5,6,7,8}, 
+						 {9,10,11,12}};
 		
 		System.out.println("arr2d[0][0] : "+arr2d[0][0]);
 		System.out.println("arr2d[0][0] : "+arr2d[0][1]);
