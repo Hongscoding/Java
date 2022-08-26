@@ -32,6 +32,7 @@ public class MultiArrayTest {
 				System.out.println("arr2d["+i+"]["+j+"] : "+arr2d[i][j]);
 			}
 		}
+		
 		// 3차원 배열
 		int[][][] arr3d = {{{1,  2,  3},
 							{4,  5,  6},
