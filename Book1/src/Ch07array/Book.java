@@ -1,5 +1,5 @@
 package Ch07array;
-
+//p211 나 혼자 코딩 하기
 public class Book {
 	private String bookname;
 	private String author;
