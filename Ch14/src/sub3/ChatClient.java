@@ -13,7 +13,7 @@ public class ChatClient {
 		
 		Socket socket = null;
 		
-		try {s
+		try {
 			socket = new Socket("localhost", 9001);
 			
 			Thread t1 = new SenderThread(socket);
