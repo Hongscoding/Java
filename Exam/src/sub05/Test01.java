@@ -1,4 +1,4 @@
-package sub5;
+package sub05;
 
 /*
  * 날짜 : 2022/09/23

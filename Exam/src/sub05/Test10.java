@@ -1,4 +1,4 @@
-package sub5;
+package sub05;
 
 import java.util.Scanner;
 
