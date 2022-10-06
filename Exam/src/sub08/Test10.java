@@ -61,16 +61,18 @@ public class Test10 {
 	private static String user = "root";
 	private static String pass = "1234";
 	
-	public static Connection getConnection() throws SQLException{
-		return DriverManager.getConnection(host, user, pass);
+	public static Connection getConnection() throws SQLException, ClassNotFoundException{
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection conn = DriverManager.getConnection(host, user, pass);
+		return conn;
 	}
 	
 	public static void main(String[] args) {
-		query("INSERT INTO `User3` VALUES ('j101', '홍길동', '010-1111-1111', 21)");
+		query("INSERT INTO `User3` VALUES ('j102', '홍길동', '010-1111-1112', 21)");
 		System.out.println("데이터 입력완료...");
 		
-		List<User> result1 = query("select & from `User3`");
-		List<User> result2 = query("select & from `User3` WHERE `uid`='j101'");
+		List<User> result1 = query("select * from `User3`");
+		List<User> result2 = query("select * from `User3` WHERE `uid`='j101'");
 		
 		System.out.println("-------------------");
 		System.out.println("result1 결과");
@@ -95,7 +97,6 @@ public class Test10 {
 		try {
 			stmt = getConnection().createStatement();
 			
-			Class.forName("com.mysql.cj.jdbc.Driver");
 			
 			if(sql.toLowerCase().startsWith("select")) {
 				rs = stmt.executeQuery(sql);

@@ -15,10 +15,13 @@ class Member{
 		this.hp = hp;
 		this.age = age;
 	}
-	
-	private String toString(Member m) {
-		return String.format("%s, %s, %d", name,hp,age);
+
+	@Override
+	public String toString() {
+		return String.format("%s, %s, %d",name, hp, age);
 	}
+	
+	
 	
 }
 
