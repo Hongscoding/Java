@@ -1,15 +1,18 @@
 package Ch12collection;
 
-//Member 클래스 구현하기
-public class Member implements Comparable<Member> {
+import java.util.Comparator;
+
+//comparator 인터페이스 구현하기
+public class Member2 implements Comparator<Member2>{
 	private int memberId;
 	private String memberName;
 	
-	public Member(int memberId, String memberName) {
+	public Member2(int memberId, String memberName) {
 		this.memberId = memberId;
 		this.memberName = memberName;
 	}
 	
+
 	public int getMemberId() {
 		return memberId;
 	}
@@ -40,7 +43,7 @@ public class Member implements Comparable<Member> {
 	public boolean equals(Object obj) {
 		if(obj instanceof Member) {
 			Member member = (Member)obj;
-			if(this.memberId == member.memberId) {
+			if(this.memberId == member.getMemberId()) {
 				return true;
 			}
 			else {
@@ -50,18 +53,14 @@ public class Member implements Comparable<Member> {
 		return false;
 	}
 
-	//compareTo() 메서드 재정의. 추가한 회원 아이디와 매개변수로 받은 회원 아이디를 비교함
+
 	@Override
-	public int compareTo(Member member) {
-		return(this.memberId - member.memberId);
+	public int compare(Member2 mem1, Member2 mem2) {
+		return mem1.getMemberId() - mem2.getMemberId();
 	}
 	
 	
 	
 	
 	
-	
-	
-	
-
 }
