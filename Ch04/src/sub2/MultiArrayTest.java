@@ -2,7 +2,7 @@ package sub2;
 /*
  * 날짜 : 2022/08/22
  * 이름 : 홍민준
- * 내용 :  
+ * 내용 :  Java 다차원 배열 
  * 
  */
 public class MultiArrayTest {
